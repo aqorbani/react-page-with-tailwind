@@ -7,6 +7,7 @@ import About from "./pages/About";
 import Menu from "./pages/Menu";
 import Dropdown from "./components/Dropdown";
 import { useEffect, useState } from "react";
+import Contact from "./pages/Contact";
 
 function App() {
   const [isOpen, setIsOpen] = useState(false);
@@ -34,6 +35,7 @@ function App() {
         <Route path="/" element={<Home />} />
         <Route path="/menu" element={<Menu />} />
         <Route path="/about" element={<About />} />
+        <Route path="/contact" element={<Contact />} />
       </Routes>
       <Footer />
     </>
