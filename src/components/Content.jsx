@@ -1,10 +1,17 @@
 import React from "react";
 import ImageOne from "../assets/img/view01.jpg";
 import ImageTwo from "../assets/img/view02.jpg";
+import LatestProducts from "./LatestProducts";
 
 const Content = () => {
   return (
     <>
+      <div className="menu-card">
+        <div className="center-content">
+          <h2 className="text-2xl">Latest Products</h2>
+          <LatestProducts />
+        </div>
+      </div>
       <div className="menu-card">
         <img
           src={ImageOne}
