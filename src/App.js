@@ -1,8 +1,43 @@
-import Home from "./pages/Home";
 import "./App.css";
+import Footer from "./components/Footer";
+import Navbar from "./components/Navbar";
+import { Route, Routes } from "react-router-dom";
+import Home from "./pages/Index";
+import About from "./pages/About";
+import Menu from "./pages/Menu";
+import Dropdown from "./components/Dropdown";
+import { useEffect, useState } from "react";
 
 function App() {
-  return <Home />;
+  const [isOpen, setIsOpen] = useState(false);
+  const toggle = () => {
+    setIsOpen(!isOpen);
+  };
+
+  useEffect(() => {
+    const hideMenu = () => {
+      if (window.innerWidth > 768 && isOpen) {
+        setIsOpen(false);
+      }
+    };
+    window.addEventListener("resize", hideMenu);
+    return () => {
+      window.removeEventListener("resize", hideMenu);
+    };
+  });
+
+  return (
+    <>
+      <Navbar toggle={toggle} />
+      <Dropdown isOpen={isOpen} toggle={toggle} />
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/menu" element={<Menu />} />
+        <Route path="/about" element={<About />} />
+      </Routes>
+      <Footer />
+    </>
+  );
 }
 
 export default App;
