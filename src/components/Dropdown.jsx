@@ -17,6 +17,9 @@ const Dropdown = ({ isOpen, toggle }) => {
       <Link className="p-8" to="/menu">
         Menu
       </Link>
+      <Link className="p-8" to="/product">
+        Product
+      </Link>
       <Link className="p-8" to="/about">
         About
       </Link>
@@ -27,8 +30,8 @@ const Dropdown = ({ isOpen, toggle }) => {
         Login
       </Link>
       <Link className="p-8" to="/register">
-          Register
-        </Link>
+        Register
+      </Link>
     </div>
   );
 };

@@ -1,4 +1,3 @@
-import "./App.css";
 import Footer from "./components/Footer";
 import Navbar from "./components/Navbar";
 import { Route, Routes } from "react-router-dom";
@@ -10,6 +9,7 @@ import { useEffect, useState } from "react";
 import Contact from "./pages/Contact";
 import Login from "./pages/Login";
 import Register from "./pages/Register";
+import SingleProduct from "./pages/SingleProduct";
 
 function App() {
   const [isOpen, setIsOpen] = useState(false);
@@ -40,6 +40,7 @@ function App() {
         <Route path="/contact" element={<Contact />} />
         <Route path="/login" element={<Login />} />
         <Route path="/register" element={<Register />} />
+        <Route path="/product" element={<SingleProduct />} />
       </Routes>
       <Footer />
     </>

@@ -10,7 +10,7 @@ const Navbar = ({ toggle }) => {
       <Link to="/" className="pl-8">
         Logo
       </Link>
-      <div className="px-4 cursor-pointer md:hidden" onClick={toggle}>
+      <div className="px-4 cursor-pointer lg:hidden" onClick={toggle}>
         <svg
           xmlns="http://www.w3.org/2000/svg"
           fill="none"
@@ -26,12 +26,15 @@ const Navbar = ({ toggle }) => {
           />
         </svg>
       </div>
-      <div className="pr-8 md:block hidden">
+      <div className="pr-8 lg:block hidden">
         <Link className="p-8" to="/">
           Home
         </Link>
         <Link className="p-8" to="/menu">
           Menu
+        </Link>
+        <Link className="p-8" to="/product">
+          Product
         </Link>
         <Link className="p-8" to="/about">
           About
