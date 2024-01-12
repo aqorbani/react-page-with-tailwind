@@ -9,6 +9,7 @@ import Dropdown from "./components/Dropdown";
 import { useEffect, useState } from "react";
 import Contact from "./pages/Contact";
 import Login from "./pages/Login";
+import Register from "./pages/Register";
 
 function App() {
   const [isOpen, setIsOpen] = useState(false);
@@ -38,6 +39,7 @@ function App() {
         <Route path="/about" element={<About />} />
         <Route path="/contact" element={<Contact />} />
         <Route path="/login" element={<Login />} />
+        <Route path="/register" element={<Register />} />
       </Routes>
       <Footer />
     </>
